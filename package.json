@@ -12,5 +12,24 @@
   "devDependencies": {
     "concurrently": "^7.3.0",
     "nodemon": "^2.0.19"
-  }
+  },
+  "scripts": {
+    "start": "node server.js",
+    "server": "nodemon server"
+  },
+  "name": "acebook-react",
+  "description": "",
+  "version": "1.0.0",
+  "main": "server.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shsn1990s/acebook-react.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/shsn1990s/acebook-react/issues"
+  },
+  "homepage": "https://github.com/shsn1990s/acebook-react#readme"
 }
