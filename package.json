@@ -15,7 +15,8 @@
   },
   "scripts": {
     "start": "node server.js",
-    "server": "nodemon server"
+    "server": "nodemon server",
+    "test": "jest"
   },
   "name": "acebook-react",
   "description": "",

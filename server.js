@@ -1,10 +1,12 @@
 const express = require('express');
 const connectDB = require('./config/db');
-const app = express ();
+const app = express();
 const PORT = process.env.PORT || 3000;
 
 // Connect to Database
 connectDB();
+
+app.use(express.json({ extended: false }));
 
 app.get('/', (req, res) => res.send('API Server is running.'));
 
@@ -15,4 +17,3 @@ app.use('/api/profile', require('./routes/api/profile'));
 app.use('/api/users', require('./routes/api/users'));
 
 app.listen(PORT, () => console.log(`Server is running on PORT ${PORT}`));
-
