@@ -17,4 +17,22 @@ describe('User Model', () => {
     });
     expect(user.email).toEqual('exampleuser@example.com');
   });
+  it('saves a new user', (done) => {
+    const user = User({
+      name: 'AZ',
+      email: 'exampleuser@example.com',
+      password: '123456',
+    });
+
+    user.save((err) => {
+      expect(err).toBeNull();
+
+      User.find((err, users) => {
+        expect(err).toBeNull();
+        expect(users[0].name).toEqual('AZ');
+        expect(users[0].email).toEqual('exampleuser@example.com');
+        done();
+      });
+    });
+  });
 });
