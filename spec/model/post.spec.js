@@ -7,15 +7,12 @@ const PostsController = require('../../controllers/posts');
 require('../mongodb_helper');
 
 describe('Posts Model', () => {
-  // beforeEach((done) => {
-  //   mongoose.connection.collections.posts.drop(() => {
-  //     done();
-  //   });
-  // });
+  beforeEach((done) => {
+    mongoose.connection.collections.posts.drop(() => {
+      done();
+    });
+  });
   it('contains a message', (done) => {
-    // mongoose.connect(
-    //   'mongodb+srv://react123:React12300@acebook-react.p2avh.mongodb.net/?retryWrites=true&w=majority'
-    // );
     var message = new Post({
       message: 'Test Message',
     });
